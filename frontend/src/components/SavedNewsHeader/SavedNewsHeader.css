@@ -1,0 +1,108 @@
+.saved-news-header {
+  background: #fff;
+  color: #1a1b22;
+}
+
+.saved-news-header_mobile {
+  position: relative;
+}
+
+.saved-news-header__container {
+  padding: 6px calc((100% - 1232px) / 2) 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0px -1px 0px #d1d2d6;
+}
+
+.saved-news-header__container_mobile {
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+}
+
+.saved-news-header__link {
+  margin: 0 auto 0 0;
+  color: #fff;
+  text-decoration: none;
+  padding: 0;
+  color: inherit;
+}
+
+.saved-news-header__link:hover {
+  opacity: 0.9;
+}
+
+.saved-news-header__logo {
+  margin: 0 auto 0 0;
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+
+  z-index: 9999999;
+}
+
+.saved-news-header__menu-button {
+  display: none;
+  margin: 0;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  z-index: 999999;
+}
+
+.saved-news-header__menu-button_not-pressed {
+  background-image: url('../../images/menu-button-mobile-black.svg');
+}
+
+.saved-news-header__menu-button_pressed {
+  background-image: url('../../images/menu-close-button-mobile.svg');
+}
+
+@media screen and (max-width: 1280px) {
+  .saved-news-header__container {
+    padding: 2px calc((100% - 1100px) / 2) 0;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .saved-news-header__container {
+    padding: 2px 40px 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .saved-news-header__container {
+    padding: 16px;
+  }
+
+  .saved-news-header__menu-button {
+    display: block;
+  }
+
+  .saved-news-header__container_mobile {
+    background-color: #1a1b22;
+    position: fixed;
+    z-index: 99999999;
+  }
+
+  .saved-news-header__menu-mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 8888888;
+  }
+}

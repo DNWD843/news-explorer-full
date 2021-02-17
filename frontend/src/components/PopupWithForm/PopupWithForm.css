@@ -1,0 +1,258 @@
+.popup {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.popup_opened {
+  display: flex;
+}
+
+.page__overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.popup__container {
+  position: relative;
+  margin: 0;
+  padding: 34px 36px 28px;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 430px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  transition: margin 0.2s ease-in-out;
+}
+
+.popup__close-button {
+  position: absolute;
+  top: -46px;
+  right: -46px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  background: url('../../images/popup-close-icon.svg');
+  cursor: pointer;
+}
+
+.popup__close-button:hover {
+  opacity: 0.9;
+}
+
+.form {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.form__title {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  color: #1a1b22;
+  margin: 0 0 25px;
+  padding: 0;
+}
+
+.form__submit-error-element {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0 0 8px;
+  color: #ff0000;
+  height: 15px;
+  display: flex;
+  align-items: flex-end;
+  align-self: center;
+  text-align: center;
+}
+
+.form__submit-button {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+
+  border-radius: 100px;
+  border: none;
+  outline: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 0 16px;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.form__submit-button_inactive {
+  background: #e6e8eb;
+  color: #b6bcbf;
+}
+
+.form__submit-button_active {
+  background: #2f71e5;
+  box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+  color: #fff;
+}
+
+.form__submit-button_active:hover {
+  background: #347eff;
+  box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+  cursor: pointer;
+}
+
+.popup__redirect-title {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #000000;
+}
+
+.popup__redirect-link {
+  margin: 0;
+  padding: 0;
+  color: #2f71e5;
+  text-decoration: none;
+  cursor: pointer;
+}
+.popup__redirect-link:hover {
+  opacity: 0.9;
+}
+
+.form__inputs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.form__field {
+  position: relative;
+  margin: 0 0 16px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.form__field:last-of-type {
+  margin-bottom: 0;
+}
+
+.form__input-label {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #2f71e5;
+}
+
+.form__input {
+  box-shadow: none;
+  border: none;
+  outline: none;
+  margin: 0 0 16px;
+  padding: 8px 0 7px;
+  box-sizing: border-box;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
+.form__input:focus {
+  border-bottom: 1px solid #000;
+}
+
+.form__input::placeholder {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  opacity: 0.2;
+}
+
+.form__input:disabled {
+  outline: none;
+  background: transparent;
+}
+
+.form__input-error {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  height: 2em;
+
+  color: #ff0000;
+}
+
+@media screen and (max-width: 600px) {
+  .popup {
+    align-items: flex-start;
+    display: flex;
+  }
+
+  .page__overlay {
+    top: 56px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .popup__container {
+    padding: 16px 16px 10%;
+    justify-content: flex-start;
+    max-width: 320px;
+    height: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    margin-top: 1000px;
+  }
+
+  .popup__container_mobile_opened {
+    margin-top: 0;
+  }
+
+  .popup__close-button {
+    display: none;
+  }
+}

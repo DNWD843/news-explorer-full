@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "react-app",
+    "prettier"
+  ],
+  "rules": {
+    "no-console": "off",
+    "semi": [
+      "error",
+      "always"
+    ],
+    "no-underscore-dangle": "off"
+  }
+}

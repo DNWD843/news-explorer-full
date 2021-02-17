@@ -1,0 +1,18 @@
+# Файл docker-compose должен начинаться с тега версии.
+version: "3"
+
+# Следует учитывать, что docker-compose работает с сервисами.
+# 1 сервис = 1 контейнер.
+# Сервисом может быть клиент, сервер, сервер баз данных...
+# Раздел, в котором будут описаны сервисы, начинается с 'services'.
+services:
+  mongodb-container:
+    image: "mongo"
+    environment:
+      - MONGO_INITDB_DATABASE=explorerdb
+    ports:
+      #from container : to host
+      - "27017:27017"
+    volumes:
+      #from host : to container
+      - ./docker/mongo_volume:/data/db

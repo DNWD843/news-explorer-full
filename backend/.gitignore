@@ -1,0 +1,12 @@
+documentation/*
+docker/*
+!docker/.gitkeep
+.env
+.yml
+logs/*
+*.log
+node_modules
+.npm
+.vscode
+.idea
+.DS_Store

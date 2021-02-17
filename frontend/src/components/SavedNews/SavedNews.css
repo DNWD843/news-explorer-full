@@ -1,0 +1,32 @@
+.saved-news {
+  margin: 0;
+  padding: 62px 0 46px;
+  box-sizing: border-box;
+  background: #f5f6f7;
+}
+
+@media screen and (max-width: 1280px) {
+  .saved-news {
+    padding-top: 32px;
+    padding-bottom: 8px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .saved-news {
+    padding-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .saved-news {
+    padding-bottom: 22px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .saved-news {
+    padding-top: 24px;
+    padding-bottom: 14px;
+  }
+}

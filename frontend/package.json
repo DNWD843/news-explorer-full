@@ -1,0 +1,50 @@
+{
+  "name": "news-explorer-frontend",
+  "version": "1.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "classnames": "^2.2.6",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "gh-deploy": "gh-pages -d build",
+    "deploy": "scp -r ./build/* express@84.201.177.57:/home/express/frontend-news",
+    "jsdoc:build": "jsdoc ./src/ ./src/components/About ./src/components/App ./src/components/Footer ./src/components/Header ./src/components/InfoTooltip ./src/components/Login ./src/components/Main ./src/components/Menu ./src/components/Navigation ./src/components/NewsCard ./src/components/NewsCardList ./src/components/NoResult ./src/components/PageNotFound ./src/components/PopupWithForm ./src/components/Preloader ./src/components/ProtectedRoute ./src/components/Register ./src/components/SavedNews ./src/components/SavedNewsHeader ./src/components/SavedNewsInfo ./src/components/SearchForm ./src/components/SearchResult  ./src/hooks/ ./src/utils/ ./README.md -d ./documentation"
+  },
+  "homepage": "https://DNWD843.github.io/",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^6.15.0",
+    "gh-pages": "^3.1.0",
+    "jsdoc": "^3.6.6",
+    "prettier": "^2.2.1"
+  }
+}

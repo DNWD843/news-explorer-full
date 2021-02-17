@@ -1,0 +1,27 @@
+@import url('./vendor/normalize.css');
+@import url('./vendor/fonts/fonts.css');
+
+.root {
+  background-color: #fff;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  margin: 0;
+  /*   сглаживание шрифтов в Firefox и браузерах на движке Webkit (Яндекс.Браузер, Google Chrome, Opera, Safari)  */
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  /*  масштабирования шрифтов   */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  /*  кернинг   */
+  text-rendering: optimizeLegibility;
+}
+
+.root__container {
+  width: 100%;
+  max-width: 1440px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
